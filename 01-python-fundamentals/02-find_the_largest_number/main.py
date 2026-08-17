@@ -16,8 +16,11 @@ numbers = []
 cont = 1
 
 def largest_number(numbers):
-   numbers.sort()
-   return numbers[-1]
+    res = numbers[0]
+    for i in numbers:
+        if i > res: 
+            res = i
+    return res
 
 while cont <= 3: 
     try: 
@@ -29,3 +32,6 @@ while cont <= 3:
 
 print(f"the largest number is: {largest_number(numbers)}")
 
+print(largest_number([12, 7, 25]))
+print(largest_number([100, 2, 50]))
+print(largest_number([-5, -20, -1]))
